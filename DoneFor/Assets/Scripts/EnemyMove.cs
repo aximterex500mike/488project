@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
+    /*
     public GameObject player;  
     private Rigidbody2D rb;
     public float speed;
@@ -65,5 +66,5 @@ public class EnemyMove : MonoBehaviour
         // if Player is dead, Enemy stops: 
         else
             rb.velocity = Vector3.zero; 
-    }
+    */
 }
