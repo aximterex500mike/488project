@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
 	animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+	animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
         // 3 - Retrieve axis information
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
@@ -36,6 +37,15 @@ public class PlayerScript : MonoBehaviour
         movement = new Vector2(
           speed.x * inputX,
           speed.y * inputY);
+
+	if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1){
+		animator.SetFloat("isFacing", Input.GetAxisRaw("Horizontal"));
+	
+	}
+	//if(Input.GetAxisRaw("Horizontal") == -1){
+	//	animator.SetFloat("lastMoveRight", Input.GetAxisRaw("Horizontal"));
+	//} 
+	
 
     }
 
