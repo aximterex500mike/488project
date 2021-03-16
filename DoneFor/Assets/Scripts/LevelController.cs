@@ -8,16 +8,13 @@ public class LevelController : MonoBehaviour
     // Start is called before the first frame update
     
 
-    void Update()
-    {
-        if(goal == 0)
-        {
-            //move to win game screen.... implement later
-        }
-    }
 
     public void addKill()
     {
         goal--;
+        if (goal <= 0)
+        {
+            //move to win game screen.... implement later
+        }
     }
 }
