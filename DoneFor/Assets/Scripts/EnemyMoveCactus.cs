@@ -140,9 +140,9 @@ public class EnemyMoveCactus : MonoBehaviour
         }
         if (thing.CompareTag("Bullet"))
         {
-            if (!thing.transform.GetComponent<cactusBulletScript>().isEnemyShot)
+            if (!thing.transform.GetComponent<bulletScript>().isEnemyShot)
             {
-                gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<cactusBulletScript>().damage);
+                gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<bulletScript>().damage);
                 Destroy(thing);
             }
         }

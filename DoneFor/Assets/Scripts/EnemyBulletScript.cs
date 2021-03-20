@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletScript : MonoBehaviour
+public class cactusBulletScript : MonoBehaviour
 {
     public int damage = 1;
     public float speed = 2;

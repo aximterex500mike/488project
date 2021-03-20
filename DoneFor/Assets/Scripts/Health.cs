@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public int hp = 1;
+    public int value = 1;
     private GameObject controller;
     // Start is called before the first frame update
     void Start()
@@ -17,15 +18,15 @@ public class Health : MonoBehaviour
         hp -= damage;
         if(hp <= 0)
         {
-            Destroy(gameObject);
             if (gameObject.CompareTag("Player"))
             {
-
+                controller.GetComponent<LevelController>().playerDeath();
             }
             if (gameObject.CompareTag("Enemy"))
             {
-                controller.transform.GetComponent<LevelController>().addKill();
+                controller.transform.GetComponent<LevelController>().addKill(value);
             }
+            Destroy(gameObject);
         }
     }
 }

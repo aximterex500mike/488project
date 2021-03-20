@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-	
-       
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     //void Update()
     //{
-        
+
     //}
 
     public Vector2 speed = new Vector2(50, 50);
     public Animator animator;
+    public float immunity = 3;
 
     // 2 - Store the movement and the component
     private Vector2 movement;
@@ -27,8 +28,8 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-	animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-	animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
         // 3 - Retrieve axis information
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
@@ -38,16 +39,18 @@ public class PlayerScript : MonoBehaviour
           speed.x * inputX,
           speed.y * inputY);
 
-	if(Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1){
-		animator.SetFloat("isFacing", Input.GetAxisRaw("Horizontal"));
-	
-	}
-	//if(Input.GetAxisRaw("Horizontal") == -1){
-	//	animator.SetFloat("lastMoveRight", Input.GetAxisRaw("Horizontal"));
-	//} 
-	
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1)
+        {
+            animator.SetFloat("isFacing", Input.GetAxisRaw("Horizontal"));
+
+        }
+        //if(Input.GetAxisRaw("Horizontal") == -1){
+        //	animator.SetFloat("lastMoveRight", Input.GetAxisRaw("Horizontal"));
+        //} 
 
     }
+
+
 
     void FixedUpdate()
     {
@@ -56,6 +59,24 @@ public class PlayerScript : MonoBehaviour
 
         // 6 - Move the game object
         rigidbodyComponent.velocity = movement;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject thing = collision.gameObject;
+        if (thing.CompareTag("Enemy"))
+        {
+            gameObject.transform.GetComponent<Health>().takeDamage(1);
+        }
+        if (thing.CompareTag("Bullet"))
+        {
+            if (thing.transform.GetComponent<EnemyBulletScript>().isEnemyShot)
+            {
+                gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<EnemyBulletScript>().damage);
+                Destroy(thing);
+            }
+        }
+        //visual indicator of damage, set immunity
     }
 }
 

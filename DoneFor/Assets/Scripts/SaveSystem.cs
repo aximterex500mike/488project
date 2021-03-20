@@ -4,27 +4,26 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    /*
-    public static void saveData(SaveInfo saveinfo)
+    public static void saveData(LevelController saveinfo)
     {
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        BinaryFormatter bf = new BinaryFormatter();
         string path = Application.persistentDataPath + "/save.save";
         FileStream fs = new FileStream(path, FileMode.Create);
 
-        SaveData save = new SaveData(saveinfo);
+        Saver save = new Saver(saveinfo);
 
-        formmater.Serialize(fs, save);
-        fs.close();
+        bf.Serialize(fs, save);
+        fs.Close();
     }
 
-    public static SaveData loadData()
+    public static Saver loadData()
     {
         string path = Application.persistentDataPath + "/save.save";
         if (File.Exists(path))
         {
             BinaryFormatter format = new BinaryFormatter();
             FileStream fs = new FileStream(path, FileMode.Open);
-            SaveData saved = format.Deserialize(fs) as SaveData;
+            Saver saved = format.Deserialize(fs) as Saver;
             fs.Close();
             return saved;
         }
@@ -34,5 +33,4 @@ public static class SaveSystem
             return null;
         }
     }
-    */
 }
