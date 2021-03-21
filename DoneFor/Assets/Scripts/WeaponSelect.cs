@@ -26,6 +26,7 @@ public class WeaponSelect : MonoBehaviour
         guns[0].SetActive(true);
         currentGun = guns[0];
         currentWeaponIndex = 0;
+        WeaponHUDScript.weaponName = currentGun.name;
     }
 
     // Update is called once per frame
@@ -40,6 +41,7 @@ public class WeaponSelect : MonoBehaviour
                 currentWeaponIndex += 1;
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
+                WeaponHUDScript.weaponName = currentGun.name;
             }
         }
 
@@ -52,6 +54,7 @@ public class WeaponSelect : MonoBehaviour
                 currentWeaponIndex -= 1;
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
+                WeaponHUDScript.weaponName = currentGun.name;
             }
         }
     } 

@@ -30,18 +30,18 @@ public class ShootScript : MonoBehaviour
     void Update()
     {
       
-      Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-    direction = (Vector2)mousePos - (Vector2)Gun.position;
-    faceMouse();
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+        direction = (Vector2)mousePos - (Vector2)Gun.position;
+        faceMouse();
 
-    if(Input.GetMouseButton(0)){
-      if(Time.time > ReadyForNextShot)
-      {
-        ReadyForNextShot = Time.time + 1/fireRate;
-        shoot();
-      }
+        if(Input.GetMouseButton(0)){
+          if(Time.time > ReadyForNextShot)
+          {
+            ReadyForNextShot = Time.time + 1/fireRate;
+            shoot();
+          }
       
-    }
+        }
 
     }
 
@@ -52,7 +52,7 @@ public class ShootScript : MonoBehaviour
 
     void shoot()
     {
-      GameObject BulletIns = Instantiate(Bullet,ShootPoint.position,ShootPoint.rotation);
+      GameObject BulletIns = Instantiate(Bullet,Gun.position,Gun.rotation);
       BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
       Destroy(BulletIns,2);
     }

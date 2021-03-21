@@ -32,7 +32,7 @@ public class SpawnEnemy : MonoBehaviour
                     control.transform.GetComponent<LevelController>().spawnCDtemp = control.transform.GetComponent<LevelController>().spawnCD;
                     cooldown = rate;
                     GameObject spawn = Instantiate(enemy, transform.position, Quaternion.identity);
-                    control.transform.GetComponent<LevelController>().supply += 1;
+                    control.transform.GetComponent<LevelController>().supply -= 1;
                 }
             }
 

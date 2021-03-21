@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
    public void StartGame() {
-       //Application.LoadLevel("Stage1");
+        SceneManager.LoadScene("Stage1");
    }
 
    public void ToSettings() {
@@ -13,8 +14,8 @@ public class MenuScript : MonoBehaviour
    }
 
    public void ToLevelSelection() {
-       //Application.LoadLevel("LevelSelection");
-   }
+        SceneManager.LoadScene("LevelSelection");
+    }
 
    public void ToMainMenu() {
        //Application.LoadLevel("MainMenu");
@@ -23,4 +24,9 @@ public class MenuScript : MonoBehaviour
    public void ToHighScore() {
        //Application.LoadLevel("HighScoreMenu");
    }
+
+    public void DeleteData()
+    {
+
+    }
 }
