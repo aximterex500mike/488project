@@ -7,19 +7,24 @@ public class Saver
 {
     public int level;
     public int coins;
-    public int score;
+    public int[] levelScores;
     //add weapons/ upgrade progress to save
 
     public Saver(LevelController lc)
     {
         if (lc.level > lc.maxLevel) {
         this.level = lc.level;
-        }
-        else
-        {
+        }else{
             this.level = lc.maxLevel;
         }
+
+        this.levelScores = lc.levelScores;
+        if(lc.score > this.levelScores[level])
+        {
+            this.levelScores[level] = lc.score;
+        }
+
         this.coins = lc.coins;
-        this.score = lc.score;
+
     }
 }

@@ -43,11 +43,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wall
+    uniqueID: 2585147925
+    locked: 0
   - name: Ground
     uniqueID: 1148628871
     locked: 0
   - name: GroundDetail
     uniqueID: 1461329679
+    locked: 0
+  - name: GroundDetail2
+    uniqueID: 2107796767
     locked: 0
   - name: ObstacleUnder
     uniqueID: 3855833071
@@ -63,4 +69,10 @@ TagManager:
     locked: 0
   - name: ObstacleOverDetail
     uniqueID: 2181338843
+    locked: 0
+  - name: Over
+    uniqueID: 1096861819
+    locked: 0
+  - name: OverDetail
+    uniqueID: 1140167019
     locked: 0

@@ -15,6 +15,7 @@ public class LevelController : MonoBehaviour
     public int maxLevel = 0;
     public float spawnCD = 1;
     public float spawnCDtemp = 5;
+    public int[] levelScores = new int[30]; 
 
     // Start is called before the first frame update
 
@@ -33,7 +34,7 @@ public class LevelController : MonoBehaviour
             Saver load = SaveSystem.loadData();
             if (load != null)
             {
-                score = load.score;
+                score = 0;
                 coins = load.coins;
                 maxLevel = load.level;
                 goal = ((level - 1) * 5) + 10;
@@ -54,23 +55,7 @@ public class LevelController : MonoBehaviour
         if (goal <= 0)
         {
             saveGame();
-            //pick next scene to move to ( will be upgrade screen, then from there navigate to stage)
-            ////reminder: use this code in "next level" part of upgrade screen
-            level += 1;
-            goal = ((level - 1) * 5) + 10;
-            supply = ((level - 1) * 5) + 10;
-            spawnCD = 1 / (Mathf.Log(level + 1, 2));
-            spawnCDtemp = 5;
-            ////
-            if (level < 5)
-            {
-                SceneManager.LoadScene("Stage1");
-            }
-            else{
-                SceneManager.LoadScene("Stage2");
-            }
-
-            
+            SceneManager.LoadScene("LevelWon");
         }
         //add to score if they are not repeating a level
         if (level > maxLevel)
@@ -85,7 +70,7 @@ public class LevelController : MonoBehaviour
         Saver load = SaveSystem.loadData();
         if (load != null)
         {
-            score = load.score;
+            score = 0;
             coins = load.coins;
             maxLevel = load.level;
             goal = ((level - 1) * 5) + 10;
@@ -105,6 +90,27 @@ public class LevelController : MonoBehaviour
         }
         //go to death screen
         SceneManager.LoadScene("Stage4");
+    }
+
+    public string getNextLevel()
+    {
+        saveGame();
+        //set up level scaling for next level
+        level += 1;
+        goal = ((level - 1) * 5) + 10;
+        supply = ((level - 1) * 5) + 10;
+        spawnCD = 1 / (Mathf.Log(level + 1, 2));
+        spawnCDtemp = 5;
+        
+        //return scene name to load
+        if (level < 5)
+        {
+            return "Stage1";
+        }
+        else
+        {
+            return "Stage2";
+        }
     }
 
     public void saveGame()
