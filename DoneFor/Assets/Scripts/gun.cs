@@ -15,11 +15,12 @@ public class gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //handle cooldown/ reload
-        if (Input.GetMouseButtonDown(0))
-        {
-            shoot();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    shoot();
+        //}
     }
 
     void shoot()

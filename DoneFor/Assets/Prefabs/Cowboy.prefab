@@ -165,9 +165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8aefdb54f0741adbb5a2577c9bb858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 5, y: 5}
+  speed: {x: 2, y: 2}
   animator: {fileID: 3164623826383440237}
   immunity: 3
+  joystick: {fileID: 0}
 --- !u!114 &259391551038577845
 MonoBehaviour:
   m_ObjectHideFlags: 0
