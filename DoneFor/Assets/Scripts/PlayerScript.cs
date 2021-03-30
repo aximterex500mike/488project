@@ -76,6 +76,14 @@ public class PlayerScript : MonoBehaviour
             }
         }
         //visual indicator of damage, set immunity
+
+        
+        // If player collides with coin, destroy 
+        if (collision.gameObject.CompareTag("Coins"))
+        {
+            Destroy(collision.gameObject);
+        }
+           
     }
 }
 
