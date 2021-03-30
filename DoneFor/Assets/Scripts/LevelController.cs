@@ -89,7 +89,7 @@ public class LevelController : MonoBehaviour
             spawnCDtemp = 1;
         }
         //go to death screen
-        SceneManager.LoadScene("Stage4");
+        SceneManager.LoadScene("Death");
     }
 
     public string getNextLevel()
