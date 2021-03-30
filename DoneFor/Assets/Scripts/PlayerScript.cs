@@ -6,59 +6,58 @@ public class PlayerScript : MonoBehaviour
 {
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-
-    //}
-
     public Vector2 speed = new Vector2(50, 50);
-    public Animator animator;
+    public Animator animator;  //this animator is for walk animaion
     public float immunity = 3;
+
+    public Joystick joystick;
 
     // 2 - Store the movement and the component
     private Vector2 movement;
     private Rigidbody2D rigidbodyComponent;
+    //private Transform cowboy;
 
+    //Called once per frame
     void Update()
     {
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
-        // 3 - Retrieve axis information
-        float inputX = Input.GetAxis("Horizontal");
-        float inputY = Input.GetAxis("Vertical");
 
-        // 4 - Movement per direction
-        movement = new Vector2(
-          speed.x * inputX,
-          speed.y * inputY);
+        // Animation code
+        animator.SetFloat("Horizontal", joystick.Horizontal);
+        animator.SetFloat("Vertical", joystick.Vertical);
 
-        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1)
+        if (joystick.Horizontal > 0.02f)
         {
-            animator.SetFloat("isFacing", Input.GetAxisRaw("Horizontal"));
-
+            animator.SetFloat("isFacing", 1);
         }
-        //if(Input.GetAxisRaw("Horizontal") == -1){
-        //	animator.SetFloat("lastMoveRight", Input.GetAxisRaw("Horizontal"));
-        //} 
+        else if( joystick.Horizontal < - 0.02f)
+        {
+            animator.SetFloat("isFacing", -1);
+        }
 
     }
 
-
-
     void FixedUpdate()
     {
+
         // 5 - Get the component and store the reference
         if (rigidbodyComponent == null) rigidbodyComponent = GetComponent<Rigidbody2D>();
 
+        moveCharacter(); 
+    }
+
+    void moveCharacter(){//Vector2 direction) {
+
+        // 3 - Retrieve axis information
+        float inputX = joystick.Horizontal;
+        float inputY = joystick.Vertical;
+
+        // 4 - Movement per direction
+        movement = new Vector2(speed.x * inputX, speed.y * inputY);
+
         // 6 - Move the game object
         rigidbodyComponent.velocity = movement;
+
+  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -77,13 +76,14 @@ public class PlayerScript : MonoBehaviour
             }
         }
         //visual indicator of damage, set immunity
+
         
         // If player collides with coin, destroy 
         if (collision.gameObject.CompareTag("Coins"))
         {
             Destroy(collision.gameObject);
         }
-            
+           
     }
 }
 

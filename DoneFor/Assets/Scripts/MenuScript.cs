@@ -1,26 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
    public void StartGame() {
-       Application.LoadLevel("Stage1");
+        SceneManager.LoadScene("Stage1");
    }
 
    public void ToSettings() {
-       Application.LoadLevel("SettingsMenu");
+       //Application.LoadLevel("SettingsMenu");
    }
 
    public void ToLevelSelection() {
-       Application.LoadLevel("LevelSelection");
-   }
+        SceneManager.LoadScene("LevelSelection");
+    }
 
    public void ToMainMenu() {
-       Application.LoadLevel("MainMenu");
+       //Application.LoadLevel("MainMenu");
    }
 
    public void ToHighScore() {
-       Application.LoadLevel("HighScoreMenu");
+       //Application.LoadLevel("HighScoreMenu");
    }
+
+    public void DeleteData()
+    {
+
+    }
 }

@@ -1,0 +1,788 @@
+fileFormatVersion: 2
+guid: 2b1825b223b604b9a9b40f517799dc1f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8778085450618422611
+    second: Cowboy5_0
+  - first:
+      213: -1265642747813404626
+    second: Cowboy5_1
+  - first:
+      213: -2388798708285884083
+    second: Cowboy5_2
+  - first:
+      213: 1470216074479207441
+    second: Cowboy5_3
+  - first:
+      213: -8541936294729948927
+    second: Cowboy5_4
+  - first:
+      213: -3451730794942192290
+    second: Cowboy5_5
+  - first:
+      213: -8767250391141392079
+    second: Cowboy5_6
+  - first:
+      213: 4516400698413112344
+    second: Cowboy5_7
+  - first:
+      213: 7424667926169675144
+    second: Cowboy5_8
+  - first:
+      213: 2347471114753351519
+    second: Cowboy5_9
+  - first:
+      213: -1565397017674816917
+    second: Cowboy5_10
+  - first:
+      213: 7296238105707885963
+    second: Cowboy5_11
+  - first:
+      213: 6146942049657467542
+    second: Cowboy5_12
+  - first:
+      213: 8408127959331861419
+    second: Cowboy5_13
+  - first:
+      213: -1158281078493668715
+    second: Cowboy5_14
+  - first:
+      213: 6409545579911134070
+    second: Cowboy5_15
+  - first:
+      213: 2858376438840373868
+    second: Cowboy5_16
+  - first:
+      213: 6466013135745653525
+    second: Cowboy5_17
+  - first:
+      213: -5986827867634073763
+    second: Cowboy5_18
+  - first:
+      213: -6394349029601786302
+    second: Cowboy5_19
+  - first:
+      213: 1595802574852320596
+    second: Cowboy5_20
+  - first:
+      213: -6602419710532203366
+    second: Cowboy5_21
+  - first:
+      213: 1128873226675071873
+    second: Cowboy5_22
+  - first:
+      213: -7032461224178102843
+    second: Cowboy5_23
+  - first:
+      213: -4873983847472982545
+    second: Cowboy5_24
+  - first:
+      213: -9159333612937801708
+    second: Cowboy5_25
+  - first:
+      213: -920971579642757671
+    second: Cowboy5_26
+  - first:
+      213: 8128475437535085768
+    second: Cowboy5_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cowboy5_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 165
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355c224853602d970800000000000000
+      internalID: 8778085450618422611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 165
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20680460a88f6ee0800000000000000
+      internalID: -1265642747813404626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 175
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4935b03b3849ded0800000000000000
+      internalID: -2388798708285884083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 165
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114076eeab1476410800000000000000
+      internalID: 1470216074479207441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 165
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101ea927232f47980800000000000000
+      internalID: -8541936294729948927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_5
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 165
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55a13b412df810d0800000000000000
+      internalID: -3451730794942192290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_6
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 165
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131ec1b5838745680800000000000000
+      internalID: -8767250391141392079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_7
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 165
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c5d3c918a7dae30800000000000000
+      internalID: 4516400698413112344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_8
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 165
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885649a2428b90760800000000000000
+      internalID: 7424667926169675144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 110
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f1d5b9a84e39020800000000000000
+      internalID: 2347471114753351519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_10
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 110
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62690dc4b7964ae0800000000000000
+      internalID: -1565397017674816917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_11
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 121
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85336766e1714560800000000000000
+      internalID: 7296238105707885963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_12
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 110
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692bebce9335e4550800000000000000
+      internalID: 6146942049657467542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_13
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 110
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba37102b4dbafa470800000000000000
+      internalID: 8408127959331861419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_14
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 110
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a1456fe75fcefe0800000000000000
+      internalID: -1158281078493668715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_15
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 110
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b3746eeb743f850800000000000000
+      internalID: 6409545579911134070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_16
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 110
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c623d6f0a3efaa720800000000000000
+      internalID: 2858376438840373868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 110
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b112540b4ebb950800000000000000
+      internalID: 6466013135745653525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 55
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ff24226c38aeca0800000000000000
+      internalID: -5986827867634073763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_19
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 55
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246c8b0bf65b247a0800000000000000
+      internalID: -6394349029601786302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_20
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 55
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45de9b5acfd652610800000000000000
+      internalID: 1595802574852320596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_21
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 55
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cc0bf114e7f54a0800000000000000
+      internalID: -6602419710532203366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 55
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18baa68f7309aaf00800000000000000
+      internalID: 1128873226675071873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_23
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 55
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cdc724b6cda76e90800000000000000
+      internalID: -7032461224178102843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_24
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 55
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe59162a3812c5cb0800000000000000
+      internalID: -4873983847472982545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_25
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 55
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4101c857b9283e080800000000000000
+      internalID: -9159333612937801708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddb9235a3d0833f0800000000000000
+      internalID: -920971579642757671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cowboy5_27
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 0
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c444cb08552ec070800000000000000
+      internalID: 8128475437535085768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

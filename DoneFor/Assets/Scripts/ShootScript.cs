@@ -19,6 +19,9 @@ public class ShootScript : MonoBehaviour
 
     float ReadyForNextShot;
 
+    // ADDED FOR JOYSTICK
+    public Joystick joystick;
+
 
 
     void Start()
@@ -29,19 +32,25 @@ public class ShootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-      Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-    direction = (Vector2)mousePos - (Vector2)Gun.position;
-    faceMouse();
 
-    if(Input.GetMouseButton(0)){
-      if(Time.time > ReadyForNextShot)
-      {
-        ReadyForNextShot = Time.time + 1/fireRate;
-        shoot();
-      }
-      
-    }
+
+        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(
+        //    new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+        //direction = (Vector2)mousePos - (Vector2)Gun.position;
+
+
+        direction = joystick.Direction;
+        faceMouse();
+        if (joystick.Direction[0] > 0.02f || joystick.Direction[0] < -0.02f
+            || joystick.Direction[1] > 0.02f || joystick.Direction[1] < -0.02f)
+        {
+            if (Time.time > ReadyForNextShot)
+            {
+                ReadyForNextShot = Time.time + 1 / fireRate;
+                shoot();
+            }
+
+        }
 
     }
 
@@ -52,7 +61,7 @@ public class ShootScript : MonoBehaviour
 
     void shoot()
     {
-      GameObject BulletIns = Instantiate(Bullet,ShootPoint.position,ShootPoint.rotation);
+      GameObject BulletIns = Instantiate(Bullet,Gun.position,Gun.rotation);
       BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
       Destroy(BulletIns,2);
     }

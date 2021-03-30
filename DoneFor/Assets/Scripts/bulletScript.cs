@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
-     
-  public int damage = 1;
+
+    // Start is called before the first frame update
+    public int damage = 1;
 
 
-  public bool isEnemyShot = false;
+    public bool isEnemyShot = false;
 
-  void Start()
-  {
-    // 2 - Limited time to live to avoid any leak
-    Destroy(gameObject, 2); // 2sec
-  }
+    void Start()
+    {
+        // 2 - Limited time to live to avoid any leak
+        Destroy(gameObject, 2); // 2sec
+    }
 }

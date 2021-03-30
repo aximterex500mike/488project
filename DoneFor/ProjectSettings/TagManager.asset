@@ -3,14 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< Updated upstream
-  tags: []
-=======
   tags:
   - Bullet
   - Enemy
   - Coins
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -44,9 +40,12 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
+   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wall
+    uniqueID: 2585147925
     locked: 0
   - name: Ground
     uniqueID: 1148628871
@@ -54,15 +53,27 @@ TagManager:
   - name: GroundDetail
     uniqueID: 1461329679
     locked: 0
+  - name: GroundDetail2
+    uniqueID: 2107796767
+    locked: 0
+  - name: ObstacleUnder
+    uniqueID: 3855833071
+    locked: 0
+  - name: ObstacleUnderDetail
+    uniqueID: 1062848045
+    locked: 0
   - name: Player
     uniqueID: 2726348767
     locked: 0
-  - name: Building
+  - name: ObstacleOver
     uniqueID: 848032919
     locked: 0
-  - name: BuildingDetail
-    uniqueID: 3855833071
-    locked: 0
-  - name: BuildingDetail2
+  - name: ObstacleOverDetail
     uniqueID: 2181338843
+    locked: 0
+  - name: Over
+    uniqueID: 1096861819
+    locked: 0
+  - name: OverDetail
+    uniqueID: 1140167019
     locked: 0
