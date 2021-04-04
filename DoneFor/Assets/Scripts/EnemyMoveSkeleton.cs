@@ -140,6 +140,15 @@ public class EnemyMoveSkeleton : MonoBehaviour
         cooldown = true; 
     }
     
+    public void Shot()
+    {
+        anim.SetTrigger("SDeath");
+    }
+
+    private void Death()
+    {
+        Destroy(this.gameObject); 
+    }
 
 }
 

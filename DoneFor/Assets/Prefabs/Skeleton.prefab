@@ -173,6 +173,7 @@ Transform:
   - {fileID: 5259237361132117657}
   - {fileID: 5259237360640800757}
   - {fileID: 5259237359492452807}
+  - {fileID: 1798147191047919834}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -230,6 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 2
   value: 1
+  drop: 1
+  coin: {fileID: 10561070091749449, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
+  dropPoint: {fileID: 1798147191047919834}
 --- !u!114 &-9006106240158186737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,3 +325,33 @@ CircleCollider2D:
   m_Offset: {x: -0.025614083, y: -0.112239614}
   serializedVersion: 2
   m_Radius: 0.051945195
+--- !u!1 &5467162097963394913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798147191047919834}
+  m_Layer: 0
+  m_Name: dropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1798147191047919834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5467162097963394913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.038, y: -0.024, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.7247, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5259237360978478486}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
