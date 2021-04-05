@@ -16,6 +16,7 @@ public class CoinScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             CoinScore.instance.updateScore(coinValue);
+            Destroy(this.gameObject);
         }
     }
 }
