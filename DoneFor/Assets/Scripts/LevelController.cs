@@ -16,6 +16,9 @@ public class LevelController : MonoBehaviour
     public float spawnCD = 1;
     public float spawnCDtemp = 5;
 
+    // upgrades
+    
+
     // Start is called before the first frame update
 
     private void Awake()

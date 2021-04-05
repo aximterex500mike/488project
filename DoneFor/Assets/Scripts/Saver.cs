@@ -10,6 +10,10 @@ public class Saver
     public int score;
     //add weapons/ upgrade progress to save
 
+    public GameObject upgradeManager;   // holds all information about upgrades
+
+    
+
     public Saver(LevelController lc)
     {
         if (lc.level > lc.maxLevel) {
