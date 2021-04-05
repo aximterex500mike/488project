@@ -12,10 +12,10 @@ public class LevelController : MonoBehaviour
     public int score = 0;
     public int coins = 0;
     public int level = 1;
-    public int maxLevel = 0;
+    public int maxLevel = 1;
     public float spawnCD = 1;
     public float spawnCDtemp = 5;
-    public int[] levelScores = new int[30]; 
+    private Saver load;
 
     // Start is called before the first frame update
 
@@ -31,15 +31,11 @@ public class LevelController : MonoBehaviour
         else
         {
             DontDestroyOnLoad(gameObject);
-            Saver load = SaveSystem.loadData();
+            load = SaveSystem.loadData();
             if (load != null)
             {
-                score = 0;
                 coins = load.coins;
                 maxLevel = load.level;
-                goal = ((level - 1) * 5) + 10;
-                supply = ((level - 1) * 5) + 10;
-                spawnCD = 1 / (Mathf.Log(level + 1, 2));
             }
         }
     }
@@ -51,6 +47,7 @@ public class LevelController : MonoBehaviour
     }
     public void addKill(int value)
     {
+        score += value * 10;
         goal -= value;
         if (goal <= 0)
         {
@@ -58,58 +55,93 @@ public class LevelController : MonoBehaviour
             SceneManager.LoadScene("LevelWon");
         }
         //add to score if they are not repeating a level
-        if (level > maxLevel)
-        {
-            score += value * 10;
-        }
+
+    }
+
+    public void scorePenalty(int i)
+    {
+        score -= i;
     }
 
     public void playerDeath()
     {
-        //reset data to before level start
-        Saver load = SaveSystem.loadData();
-        if (load != null)
-        {
-            score = 0;
-            coins = load.coins;
-            maxLevel = load.level;
-            goal = ((level - 1) * 5) + 10;
-            supply = ((level - 1) * 5) + 10;
-            spawnCD = 1 / (Mathf.Log(level + 1, 2));
-        }
-        else
-        {
-            supply = 10;
-            goal = 10;
-            score = 0;
-            coins = 0;
-            level = 1;
-            maxLevel = 0;
-            spawnCD = 1;
-            spawnCDtemp = 1;
-        }
-        //go to death screen
         SceneManager.LoadScene("Death");
     }
 
-    public string getNextLevel()
+    public void startFromLevel(int i)
     {
-        saveGame();
-        //set up level scaling for next level
-        level += 1;
-        goal = ((level - 1) * 5) + 10;
-        supply = ((level - 1) * 5) + 10;
-        spawnCD = 1 / (Mathf.Log(level + 1, 2));
+        //
+        //set spawncd, temp, goal, supply
+        //still need to figure out scaling
+        //
+        level = i;
+        goal = (i * 5) + 10;
+        supply = goal;
         spawnCDtemp = 5;
-        
-        //return scene name to load
-        if (level < 5)
+        spawnCD = 1 - (((float).025) * level);
+        score = 0;
+  
+        if(level == 26)
         {
-            return "Stage1";
+            //load win screen
+            //SceneManager.LoadScene();
+        }
+        else if(level < 5)
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        else if (level < 10)
+        {
+            SceneManager.LoadScene("Stage2");
+        }
+        else if (level < 15)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
+        else if (level < 20)
+        {
+            SceneManager.LoadScene("Stage4");
         }
         else
         {
-            return "Stage2";
+            SceneManager.LoadScene("Stage5");
+        }
+    }
+
+    public void getNextLevel()
+    {
+        //set up level scaling for next level
+        level += 1;
+        goal = (level * 5) + 10;
+        supply = goal;
+        spawnCDtemp = 5;
+        spawnCD = 1 - (((float).025) * level);
+
+        //return scene name to load
+        if (level == 26)
+        {
+            //load win screen
+            //SceneManager.LoadScene();
+        }
+        else if (level < 5)
+        {
+            SceneManager.LoadScene("Stage1");
+        }
+        else if (level < 10)
+        {
+            SceneManager.LoadScene("Stage2");
+        }
+        else if (level < 15)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
+        else if (level < 20)
+        {
+            SceneManager.LoadScene("Stage4");
+        }
+        else
+        {
+            SceneManager.LoadScene("Stage5");
         }
     }
 

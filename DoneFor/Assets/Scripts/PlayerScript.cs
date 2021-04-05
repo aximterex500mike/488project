@@ -63,15 +63,18 @@ public class PlayerScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject thing = collision.gameObject;
+        GameObject control = GameObject.FindWithTag("GameController");
         if (thing.CompareTag("Enemy"))
         {
             gameObject.transform.GetComponent<Health>().takeDamage(1);
+            control.GetComponent<LevelController>().scorePenalty(0);
         }
         if (thing.CompareTag("Bullet"))
         {
             if (thing.transform.GetComponent<EnemyBulletScript>().isEnemyShot)
             {
                 gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<EnemyBulletScript>().damage);
+                control.GetComponent<LevelController>().scorePenalty(0);
                 Destroy(thing);
             }
         }

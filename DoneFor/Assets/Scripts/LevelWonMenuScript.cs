@@ -44,7 +44,7 @@ public class LevelWonMenuScript : MonoBehaviour
 
     public void ToNextLevel()
     {
-        SceneManager.LoadScene(controller.GetComponent<LevelController>().getNextLevel());
+        controller.GetComponent<LevelController>().getNextLevel();
     }
 
     public void back()

@@ -7,6 +7,8 @@ TagManager:
   - Bullet
   - Enemy
   - Coins
+  - Display
+  - Display2
   layers:
   - Default
   - TransparentFX
@@ -40,7 +42,7 @@ TagManager:
   - 
   - 
   - 
-   m_SortingLayers:
+  m_SortingLayers:
   - name: Default
     uniqueID: 0
     locked: 0

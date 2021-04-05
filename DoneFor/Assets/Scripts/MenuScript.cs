@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
    public void StartGame() {
-        SceneManager.LoadScene("Stage1");
+        GameObject controller = GameObject.FindWithTag("GameController");
+        controller.GetComponent<LevelController>().startFromLevel(1);
    }
 
    public void ToSettings() {
