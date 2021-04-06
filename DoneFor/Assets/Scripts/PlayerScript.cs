@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
 
-
+    public static int Invulnerable = 0;
     public Vector2 speed = new Vector2(50, 50);
     public Animator animator;  //this animator is for walk animaion
     public float immunity = 3;
@@ -64,6 +64,7 @@ public class PlayerScript : MonoBehaviour
     {
         GameObject thing = collision.gameObject;
         GameObject control = GameObject.FindWithTag("GameController");
+         if(Invulnerable == 0){
         if (thing.CompareTag("Enemy"))
         {
             gameObject.transform.GetComponent<Health>().takeDamage(1);
@@ -78,6 +79,7 @@ public class PlayerScript : MonoBehaviour
                 Destroy(thing);
             }
         }
+         }
         //visual indicator of damage, set immunity
 
         

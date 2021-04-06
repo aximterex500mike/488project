@@ -17,6 +17,11 @@ public class Health : MonoBehaviour
     void Start()
     {
         controller = GameObject.FindWithTag("GameController");
+         if (gameObject.CompareTag("Player"))
+        {
+            HUDHealth.HealthVal = hp;
+            Invulnerability.HealthVal = hp;
+        }
     }
 
     void Update()
@@ -31,11 +36,20 @@ public class Health : MonoBehaviour
     public void takeDamage(int damage)
     {
         hp -= damage;
+        if (gameObject.CompareTag("Enemy"))
+        {
+            ScoreScript.ScoreVal += 10;
+        }
+        if (gameObject.CompareTag("Player"))
+        {
+            HUDHealth.HealthVal = hp;
+        }
         if(hp <= 0)
         {
             if (gameObject.CompareTag("Player"))
             {
                 controller.GetComponent<LevelController>().playerDeath();
+                
             }
             if (gameObject.CompareTag("Enemy"))
             {

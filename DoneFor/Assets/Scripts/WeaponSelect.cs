@@ -6,6 +6,8 @@ public class WeaponSelect : MonoBehaviour
 {
     int totalWeapons = 1;
     public int currentWeaponIndex;
+    public static bool nextPress;
+    public static bool prevPress;
 
     public GameObject[] guns;
     public GameObject weaponHolder;
@@ -32,7 +34,7 @@ public class WeaponSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(nextPress  == true)
         {
             //next Weapon
             if(currentWeaponIndex < totalWeapons-1)
@@ -42,10 +44,11 @@ public class WeaponSelect : MonoBehaviour
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
                 WeaponHUDScript.weaponName = currentGun.name;
+                nextPress = false;
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (prevPress  == true)
         {
             //previous Weapon
             if (currentWeaponIndex > 0)
@@ -55,6 +58,7 @@ public class WeaponSelect : MonoBehaviour
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
                 WeaponHUDScript.weaponName = currentGun.name;
+                prevPress = false;
             }
         }
     } 
