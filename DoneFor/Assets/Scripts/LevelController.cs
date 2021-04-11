@@ -17,6 +17,9 @@ public class LevelController : MonoBehaviour
     public float spawnCDtemp = 5;
     private Saver load;
 
+    // upgrades
+    
+
     // Start is called before the first frame update
 
     private void Awake()
