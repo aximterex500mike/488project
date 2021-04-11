@@ -28,6 +28,7 @@ public class ShootScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+<<<<<<< Updated upstream
     {
       
       Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
@@ -42,10 +43,32 @@ public class ShootScript : MonoBehaviour
       }
       
     }
+=======
+    {
+
+
+        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(
+        //    new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+        //direction = (Vector2)mousePos - (Vector2)Gun.position;
+
+
+        direction = joystick.Direction;
+        faceJoy();
+        if (joystick.Direction[0] > 0.5f || joystick.Direction[0] < -0.5f
+            || joystick.Direction[1] > 0.5f || joystick.Direction[1] < -0.5f)
+        {
+            if (Time.time > ReadyForNextShot)
+            {
+                ReadyForNextShot = Time.time + 1 / fireRate;
+                shoot();
+            }
+
+        }
+>>>>>>> Stashed changes
 
     }
 
-    void faceMouse()
+    void faceJoy()
     {
         Gun.transform.right = direction;
     }

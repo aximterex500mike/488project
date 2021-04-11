@@ -54,6 +54,42 @@ public class PlayerScript : MonoBehaviour
         // 5 - Get the component and store the reference
         if (rigidbodyComponent == null) rigidbodyComponent = GetComponent<Rigidbody2D>();
 
+<<<<<<< Updated upstream
+=======
+        moveCharacter(); 
+    }
+
+    void moveCharacter(){//Vector2 direction) {
+        //float inputX = 0;
+        //float inputY = 0;
+
+        //if (joystick.Horizontal >= 0.02f)
+        //{
+        //    inputX = speed.x;
+        //}
+        //else if (joystick.Horizontal <= -0.02f)
+        //{
+        //    inputX = -speed.x;
+        //}
+
+        //if (joystick.Vertical >= 0.02f)
+        //{
+        //    inputY = speed.y;
+        //}
+        //else if (joystick.Vertical <= -0.02f) {
+        //    inputY = -speed.y;
+        //}
+
+        //movement = new Vector2(inputX, inputY);
+
+        // 3 - Retrieve axis information
+        float inputX = joystick.Horizontal;
+        float inputY = joystick.Vertical;
+
+        // 4 - Movement per direction
+        movement = new Vector2(speed.x * inputX, speed.y * inputY);
+
+>>>>>>> Stashed changes
         // 6 - Move the game object
         rigidbodyComponent.velocity = movement;
     }
