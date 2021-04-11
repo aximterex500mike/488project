@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4491150207415376798}
   m_Layer: 0
   m_Name: TestBullet
-  m_TagString: Bullet
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1568618529
-  m_SortingLayer: 5
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -2420198739578487706, guid: 81b54419f74c8e04c8b8c4d6683c1802,
     type: 3}
