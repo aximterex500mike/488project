@@ -23,9 +23,9 @@ public class DeathMenuScript : MonoBehaviour
         ///////////////////////////////get name here
         /////name
         string scoreName = aname.text;
-        if (scoreName.Length < 3 || scoreName.Length > 12)
+        if (scoreName.Length < 3 || scoreName.Length > 12 || scoreName.Contains(" "))
         {
-            messageDisplay.text = "Name length must be 3-12";
+            messageDisplay.text = "Invalid name";
         }
         else
         {
