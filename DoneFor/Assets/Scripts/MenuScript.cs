@@ -5,29 +5,45 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-   public void StartGame() {
-        GameObject controller = GameObject.FindWithTag("GameController");
+    public GameObject popup;
+    GameObject controller;
+    private void Start()
+    {
+        controller = GameObject.FindWithTag("GameController");
+    }
+    public void StartGame() {
         controller.GetComponent<LevelController>().startFromLevel(1);
    }
 
    public void ToSettings() {
-       //Application.LoadLevel("SettingsMenu");
+        SceneManager.LoadScene("SettingsMenu");
    }
 
    public void ToLevelSelection() {
         SceneManager.LoadScene("LevelSelection");
-    }
+   }
 
    public void ToMainMenu() {
-       //Application.LoadLevel("MainMenu");
+        SceneManager.LoadScene("MainMenu");
    }
 
    public void ToHighScore() {
-       //Application.LoadLevel("HighScoreMenu");
+        SceneManager.LoadScene("HighScoreMenu");
    }
 
-    public void DeleteData()
+   public void confirmDelete()
     {
-
+        popup.SetActive(true);
     }
+
+    public void dontDelete()
+    {
+        popup.SetActive(false);
+    }
+   public void deleteData()
+   {
+        popup.SetActive(false);
+        controller.GetComponent<LevelController>().deleteData();
+        Debug.LogError("test1");
+   }
 }

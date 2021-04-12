@@ -9,12 +9,14 @@ public class UpgradeItem : MonoBehaviour
     public int itemId;
     public Text priceText;
     public Text quantityText;
-    public GameObject ItemManager;
+    public GameObject controller;
+    int [,] upgradeItems;
 
-
-    // Update is called once per frame
-    void Update() {
-        priceText.text = ItemManager.GetComponent<ItemManagerScript>().upgradeItems[2, itemId].ToString();
-        quantityText.text = ItemManager.GetComponent<ItemManagerScript>().upgradeItems[3, itemId].ToString();
+    private void OnEnable()
+    {
+        controller = GameObject.FindWithTag("GameController");
+        upgradeItems = controller.GetComponent<LevelController>().upgradeItems;
+        priceText.text = (upgradeItems[2, itemId]).ToString();
+        quantityText.text = (upgradeItems[3, itemId]).ToString();
     }
 }

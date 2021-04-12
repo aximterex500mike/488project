@@ -170,6 +170,13 @@ MonoBehaviour:
   speed: {x: 2, y: 2}
   animator: {fileID: 7077223240016844281}
   immunity: 3
+  bullet: {fileID: 4953218137626366413, guid: df9f5b86041158a4097ab1e78ce77050, type: 3}
+  sbullet: {fileID: 4953218137626366413, guid: ccc3cb5c958df854582f3fb72bdeb3ce, type: 3}
+  bombdrop: {fileID: 7005803971918171153, guid: 483c5ecbc157f254d804d5ef5703ca8b,
+    type: 3}
+  revolver: {fileID: 735963097699731889, guid: 2dd508400c73bb241a2af85e21a6a55b, type: 3}
+  shotgun: {fileID: 496553727124933573, guid: f64fabf3938915b42831e2c5d5b8e1ee, type: 3}
+  bomb: {fileID: 7383780273259393442, guid: 25348c2aa2b3e2a46b8ea35376341844, type: 3}
   joystick: {fileID: 0}
 --- !u!114 &7077223240016844283
 MonoBehaviour:

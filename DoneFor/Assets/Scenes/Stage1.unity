@@ -10573,7 +10573,7 @@ GameObject:
   - component: {fileID: 874395831}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: Event
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51832,6 +51832,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6050023256989425964, guid: c603277fcf1b5054e967f9de2db3be27,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050023256989425964, guid: c603277fcf1b5054e967f9de2db3be27,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -152.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6050023256998618659, guid: c603277fcf1b5054e967f9de2db3be27,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -51861,6 +51871,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050023257376441126, guid: c603277fcf1b5054e967f9de2db3be27,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 255.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050023257376441126, guid: c603277fcf1b5054e967f9de2db3be27,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 148.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050023258771672243, guid: c603277fcf1b5054e967f9de2db3be27,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 46.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050023258771672243, guid: c603277fcf1b5054e967f9de2db3be27,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -152.5
       objectReference: {fileID: 0}
     - target: {fileID: 6050023258839242040, guid: c603277fcf1b5054e967f9de2db3be27,
         type: 3}

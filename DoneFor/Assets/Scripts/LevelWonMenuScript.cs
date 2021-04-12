@@ -9,12 +9,14 @@ public class LevelWonMenuScript : MonoBehaviour
     public GameObject menuDisplay;
     public GameObject upgradeDisplay;
     public GameObject settingsDisplay;
+    public GameObject pictures;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GameObject.FindWithTag("GameController");
         menuDisplay.SetActive(true);
+        pictures.SetActive(true);
         upgradeDisplay.SetActive(false);
         settingsDisplay.SetActive(false);
     }
@@ -28,6 +30,7 @@ public class LevelWonMenuScript : MonoBehaviour
     public void ToSettings()
     {
         menuDisplay.SetActive(false);
+        pictures.SetActive(false);
         settingsDisplay.SetActive(true);
     }
 
@@ -39,6 +42,7 @@ public class LevelWonMenuScript : MonoBehaviour
     public void ToUpgradeMenu()
     {
         menuDisplay.SetActive(false);
+        pictures.SetActive(false);
         upgradeDisplay.SetActive(true);
     }
 
@@ -50,6 +54,7 @@ public class LevelWonMenuScript : MonoBehaviour
     public void back()
     {
         menuDisplay.SetActive(true);
+        pictures.SetActive(true);
         upgradeDisplay.SetActive(false);
         settingsDisplay.SetActive(false);
     }

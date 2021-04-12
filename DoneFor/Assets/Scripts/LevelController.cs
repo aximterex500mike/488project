@@ -15,7 +15,7 @@ public class LevelController : MonoBehaviour
     public int maxLevel = 1;
     public float spawnCD = 1;
     public float spawnCDtemp = 5;
-    public int[,] upgradeItems = new int[4, 7];
+    public int[,] upgradeItems = new int[4,8];
     private Saver load;
 
     // upgrades
@@ -30,8 +30,6 @@ public class LevelController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        // if more then one music player is in the scene
-        //destroy ourselves
         else
         {
             DontDestroyOnLoad(gameObject);
@@ -44,6 +42,8 @@ public class LevelController : MonoBehaviour
             }
             else
             {
+                coins = 0;
+                maxLevel = 1;
                 upgradeItems[1, 1] = 1;  // revolver firerate
                 upgradeItems[1, 2] = 2;  // revolver dmg
                 upgradeItems[1, 3] = 3;  // shotgun firerate
@@ -84,11 +84,10 @@ public class LevelController : MonoBehaviour
         goal -= value;
         if (goal <= 0)
         {
+            level += 1;
             saveGame();
             SceneManager.LoadScene("LevelWon");
         }
-        //add to score if they are not repeating a level
-
     }
 
     public void scorePenalty(int i)
@@ -144,7 +143,6 @@ public class LevelController : MonoBehaviour
     public void getNextLevel()
     {
         //set up level scaling for next level
-        level += 1;
         goal = (level * 5) + 10;
         supply = goal;
         spawnCDtemp = 5;
@@ -181,5 +179,38 @@ public class LevelController : MonoBehaviour
     public void saveGame()
     {
         SaveSystem.saveData(this);
+    }
+
+    public void deleteData()
+    {
+        coins = 0;
+        maxLevel = 1;
+        upgradeItems[1, 1] = 1;  // revolver firerate
+        upgradeItems[1, 2] = 2;  // revolver dmg
+        upgradeItems[1, 3] = 3;  // shotgun firerate
+        upgradeItems[1, 4] = 4;  // shotgun dmg
+        upgradeItems[1, 5] = 5;  // bomb radius
+        upgradeItems[1, 6] = 6;  // bomb count
+        upgradeItems[1, 7] = 7;  // player health
+
+        // Price = upgradeItems[2,i]
+        upgradeItems[2, 1] = 10;
+        upgradeItems[2, 2] = 10;
+        upgradeItems[2, 3] = 10;
+        upgradeItems[2, 4] = 10;
+        upgradeItems[2, 5] = 10;
+        upgradeItems[2, 6] = 10;
+        upgradeItems[2, 7] = 10;
+
+        // Quantity = upgradeItems[3,i]
+        upgradeItems[3, 1] = 0;
+        upgradeItems[3, 2] = 0;
+        upgradeItems[3, 3] = 0;
+        upgradeItems[3, 4] = 0;
+        upgradeItems[3, 5] = 0;
+        upgradeItems[3, 6] = 0;
+        upgradeItems[3, 7] = 0;
+
+        saveGame();
     }
 }

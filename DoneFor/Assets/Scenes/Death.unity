@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreDisplay: {fileID: 505413093}
   messageDisplay: {fileID: 1631623710}
-  name: {fileID: 1917451315}
+  aname: {fileID: 1917451315}
   submitButton: {fileID: 951698556}
 --- !u!4 &81159913
 Transform:

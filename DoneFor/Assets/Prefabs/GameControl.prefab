@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712785442649251295}
-  - component: {fileID: 712785442649251294}
+  - component: {fileID: 6081726365981244694}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: GameController
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &712785442649251294
+--- !u!114 &6081726365981244694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,6 +48,6 @@ MonoBehaviour:
   score: 0
   coins: 0
   level: 1
-  maxLevel: 0
+  maxLevel: 1
   spawnCD: 1
   spawnCDtemp: 5

@@ -80,55 +80,14 @@ public class ItemManagerScript : MonoBehaviour
 {
     public int coins;   // coins that will be loaded in from GameObject
     public Text coinsText;
-
-    // public WeaponUpgrade weaponUpgrade; // loaded in from GameObject
-    // public PlayerUpgrade playerUpgrade;
-    // public BombUpgrade bombUpgrade;
-
     private GameObject controller;
+    public int[,] upgradeItems;
 
-    public int[,] upgradeItems = new int[4,7];
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         controller = GameObject.FindWithTag("GameController");
-
-        coinsText.text = "Coins: " + coins.ToString();
-
-        // data should be loaded in from Player gameObject
-        // weaponUpgrade = new WeaponUpgrade(0, 0, 0);
-        // playerUpgrade = new PlayerUpgrade(0, 0);
-        // bombUpgrade = new BombUpgrade(0, 0, 0);
-
-        // ID's = upgradeItems[1,i]
-        upgradeItems[1,1] = 1;  // revolver firerate
-        upgradeItems[1,2] = 2;  // revolver dmg
-        upgradeItems[1,3] = 3;  // shotgun firerate
-        upgradeItems[1,4] = 4;  // shotgun dmg
-        upgradeItems[1,5] = 5;  // bomb radius
-        upgradeItems[1,6] = 6;  // bomb count
-        upgradeItems[1,7] = 7;  // player health
-
-        // Price = upgradeItems[2,i]
-        upgradeItems[2,1] = 10;
-        upgradeItems[2,2] = 10;
-        upgradeItems[2,3] = 10;
-        upgradeItems[2,4] = 10;
-        upgradeItems[2,5] = 10;
-        upgradeItems[2,6] = 10;
-        upgradeItems[2,7] = 10;
-
-        // Quantity = upgradeItems[3,i]
-        upgradeItems[3,1] = 0;
-        upgradeItems[3,2] = 0;
-        upgradeItems[3,3] = 0;
-        upgradeItems[3,4] = 0;
-        upgradeItems[3,5] = 0;
-        upgradeItems[3,6] = 0;
-        upgradeItems[3,7] = 0;
-
+        coins = controller.GetComponent<LevelController>().coins;
+        coinsText.text = ("Coins: " + coins.ToString());
     }
 
 
@@ -136,12 +95,25 @@ public class ItemManagerScript : MonoBehaviour
 
         GameObject UpgradeItemRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         int itemId = UpgradeItemRef.GetComponent<UpgradeItem>().itemId;
+        upgradeItems = controller.GetComponent<LevelController>().upgradeItems;
+        if (upgradeItems[3, itemId] < 5)
+        {
+            if (coins >= upgradeItems[2, itemId])
+            {
+                coins -= upgradeItems[2, itemId];
+                coinsText.text = "Coins: " + coins.ToString();
 
-        if(coins >= upgradeItems[2, itemId]) {
-            coins -= upgradeItems[2, itemId];
-            upgradeItems[3, itemId]++;
-            coinsText.text = "Coins: " + coins.ToString();
-            UpgradeItemRef.GetComponent<UpgradeItem>().quantityText.text = upgradeItems[3, itemId].ToString();
+                upgradeItems[3, itemId]++;
+                upgradeItems[2, itemId] +=10;
+
+                controller.GetComponent<LevelController>().coins = coins;
+                controller.GetComponent<LevelController>().upgradeItems = upgradeItems;
+
+                UpgradeItemRef.GetComponent<UpgradeItem>().quantityText.text = upgradeItems[3, itemId].ToString();
+                UpgradeItemRef.GetComponent<UpgradeItem>().priceText.text = upgradeItems[2, itemId].ToString();
+
+
+            }
         }
 
 

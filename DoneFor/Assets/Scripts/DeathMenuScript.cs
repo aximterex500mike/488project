@@ -9,7 +9,7 @@ public class DeathMenuScript : MonoBehaviour
     GameObject controller;
     public Text scoreDisplay;
     public Text messageDisplay;
-    public InputField name;
+    public InputField aname;
     public GameObject submitButton;
     private void Start()
     {
@@ -22,7 +22,7 @@ public class DeathMenuScript : MonoBehaviour
     {
         ///////////////////////////////get name here
         /////name
-        string scoreName = name.text;
+        string scoreName = aname.text;
         if (scoreName.Length < 3 || scoreName.Length > 12)
         {
             messageDisplay.text = "Name length must be 3-12";
