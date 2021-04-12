@@ -7,7 +7,7 @@ public static class SaveSystem
     public static void saveData(LevelController saveinfo)
     {
         BinaryFormatter bf = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/save.save";
+        string path = Application.persistentDataPath + "/save1.save";
         FileStream fs = new FileStream(path, FileMode.Create);
 
         Saver save = new Saver(saveinfo);
@@ -18,7 +18,7 @@ public static class SaveSystem
 
     public static Saver loadData()
     {
-        string path = Application.persistentDataPath + "/save.save";
+        string path = Application.persistentDataPath + "/save1.save";
         if (File.Exists(path))
         {
             BinaryFormatter format = new BinaryFormatter();

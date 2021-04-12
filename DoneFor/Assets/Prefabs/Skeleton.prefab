@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5259237359492452807}
   - component: {fileID: 5259237359492452804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5259237360640800757}
   - component: {fileID: 5259237360640800754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skele_sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 5259237360978478472}
   - component: {fileID: -6773761572400273572}
   - component: {fileID: -9006106240158186737}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6129c6935a6b56a4fb1e2140c392a468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 14
   value: 1
   drop: 1
   coin: {fileID: 10561070091749449, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
@@ -246,11 +246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13da1106e6fae74fa771c48eb2c0db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  attackDistance: 0
-  timeAttack: 0
-  anim: {fileID: 5259237360978478472}
-  move: 0
 --- !u!1 &5259237361132117656
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +257,7 @@ GameObject:
   - component: {fileID: 5259237361132117657}
   - component: {fileID: 5259237361132117671}
   - component: {fileID: 5259237361132117670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: skele_collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1798147191047919834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dropPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

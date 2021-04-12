@@ -9,6 +9,7 @@ TagManager:
   - Coins
   - Display
   - Display2
+  - Event
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -66,6 +67,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2726348767
+    locked: 0
+  - name: Enemy
+    uniqueID: 622677345
     locked: 0
   - name: ObstacleOver
     uniqueID: 848032919

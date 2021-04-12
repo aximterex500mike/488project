@@ -19,6 +19,8 @@ public class Health : MonoBehaviour
         controller = GameObject.FindWithTag("GameController");
          if (gameObject.CompareTag("Player"))
         {
+            //adds health from upgrades
+            hp = (controller.GetComponent<LevelController>().upgradeItems[3, 7] + 3);
             HUDHealth.HealthVal = hp;
             Invulnerability.HealthVal = hp;
         }

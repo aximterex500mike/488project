@@ -78,7 +78,6 @@ using UnityEngine.EventSystems;
 
 public class ItemManagerScript : MonoBehaviour
 {
-
     public int coins;   // coins that will be loaded in from GameObject
     public Text coinsText;
 
@@ -88,13 +87,13 @@ public class ItemManagerScript : MonoBehaviour
 
     private GameObject controller;
 
-    public int[,] upgradeItems = new int[4,6];
+    public int[,] upgradeItems = new int[4,7];
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //controller = GameObject.FindWithTag("GameController");
+        controller = GameObject.FindWithTag("GameController");
 
         coinsText.text = "Coins: " + coins.ToString();
 
@@ -104,11 +103,13 @@ public class ItemManagerScript : MonoBehaviour
         // bombUpgrade = new BombUpgrade(0, 0, 0);
 
         // ID's = upgradeItems[1,i]
-        upgradeItems[1,1] = 1;  // weapon firerate
-        upgradeItems[1,2] = 2;  // weapon dmg
-        upgradeItems[1,3] = 3;  // bomb radius
-        upgradeItems[1,4] = 4;  // bomb dmg
-        upgradeItems[1,5] = 5;  // player health
+        upgradeItems[1,1] = 1;  // revolver firerate
+        upgradeItems[1,2] = 2;  // revolver dmg
+        upgradeItems[1,3] = 3;  // shotgun firerate
+        upgradeItems[1,4] = 4;  // shotgun dmg
+        upgradeItems[1,5] = 5;  // bomb radius
+        upgradeItems[1,6] = 6;  // bomb count
+        upgradeItems[1,7] = 7;  // player health
 
         // Price = upgradeItems[2,i]
         upgradeItems[2,1] = 10;
@@ -116,6 +117,8 @@ public class ItemManagerScript : MonoBehaviour
         upgradeItems[2,3] = 10;
         upgradeItems[2,4] = 10;
         upgradeItems[2,5] = 10;
+        upgradeItems[2,6] = 10;
+        upgradeItems[2,7] = 10;
 
         // Quantity = upgradeItems[3,i]
         upgradeItems[3,1] = 0;
@@ -123,10 +126,9 @@ public class ItemManagerScript : MonoBehaviour
         upgradeItems[3,3] = 0;
         upgradeItems[3,4] = 0;
         upgradeItems[3,5] = 0;
+        upgradeItems[3,6] = 0;
+        upgradeItems[3,7] = 0;
 
-        
-
-        
     }
 
 

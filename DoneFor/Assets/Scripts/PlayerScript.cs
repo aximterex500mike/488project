@@ -9,6 +9,30 @@ public class PlayerScript : MonoBehaviour
     public Vector2 speed = new Vector2(50, 50);
     public Animator animator;  //this animator is for walk animaion
     public float immunity = 3;
+    public GameObject bullet;
+    public GameObject sbullet;
+    public GameObject bombdrop;
+    public GameObject revolver;
+    public GameObject shotgun;
+    public GameObject bomb;
+    GameObject controller;
+    int[,] upgradeItems;
+
+    private void Start()
+    {
+        //applies upgrades to weapons
+        controller = GameObject.FindWithTag("GameController");
+        upgradeItems = controller.GetComponent<LevelController>().upgradeItems;
+        GameObject revolver = gameObject.transform.GetChild(0).gameObject;
+        GameObject shotgun = gameObject.transform.GetChild(1).gameObject;
+        GameObject bomb = gameObject.transform.GetChild(2).gameObject;
+        revolver.GetComponent<ShootScript>().fireRate   = ((((float)0.4)* upgradeItems[3, 1]) + 4);
+        bullet.GetComponent<bulletScript>().damage      = ((2*upgradeItems[3, 2])+10);
+        shotgun.GetComponent<ShootScript>().fireRate    = ((((float)0.2) * upgradeItems[3, 3]) + 2);
+        sbullet.GetComponent<bulletScript>().damage     = (upgradeItems[3, 4] + 5);
+        bomb.GetComponent<ShootScript>().count          = (upgradeItems[3, 5] + 3);
+        bombdrop.GetComponent<BombScript>().radius      = (2 + upgradeItems[3, 6]);
+    }
 
     public Joystick joystick;
 

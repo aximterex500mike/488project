@@ -7,19 +7,16 @@ public class Saver
 {
     public int level;
     public int coins;
-    //add weapons/ upgrade progress to save
-
-    public GameObject upgradeManager;   // holds all information about upgrades
-
-    
+    public int[,] upgradeItems;
 
     public Saver(LevelController lc)
     {
         if (lc.level > lc.maxLevel) {
-        this.level = lc.level;
+            this.level = lc.level;
         }else{
             this.level = lc.maxLevel;
         }
         this.coins = lc.coins;
+        this.upgradeItems = lc.upgradeItems;
     }
 }

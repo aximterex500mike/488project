@@ -17,6 +17,12 @@ public class ShootScript : MonoBehaviour
 
     public float fireRate;
 
+    public int gun;
+
+    public float spread;
+
+    public int count = 3;
+
     float ReadyForNextShot;
 
     // ADDED FOR JOYSTICK
@@ -61,9 +67,41 @@ public class ShootScript : MonoBehaviour
 
     void shoot()
     {
-      GameObject BulletIns = Instantiate(Bullet,Gun.position,Gun.rotation);
-      BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
-      Destroy(BulletIns,2);
+        switch (gun){
+            //revolver
+            case 0:
+                GameObject BulletIns = Instantiate(Bullet, Gun.position, Gun.rotation);
+                BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
+                break;
+
+            //shotgun
+            case 1:
+                GameObject BulletIns2 = Instantiate(Bullet, Gun.position, Gun.rotation);
+                BulletIns2.GetComponent<Rigidbody2D>().AddForce(BulletIns2.transform.right * BulletSpeed);
+                GameObject BulletIns3 = Instantiate(Bullet, Gun.position, Gun.rotation);
+                BulletIns3.transform.transform.Rotate(0, 0, spread);
+                BulletIns3.GetComponent<Rigidbody2D>().AddForce(BulletIns3.transform.right * BulletSpeed);
+                GameObject BulletIns4 = Instantiate(Bullet, Gun.position, Gun.rotation);
+                BulletIns4.transform.transform.Rotate(0, 0, spread*2);
+                BulletIns4.GetComponent<Rigidbody2D>().AddForce(BulletIns4.transform.right * BulletSpeed);
+                GameObject BulletIns5 = Instantiate(Bullet, Gun.position, Gun.rotation);
+                BulletIns5.transform.transform.Rotate(0, 0, -spread);
+                BulletIns5.GetComponent<Rigidbody2D>().AddForce(BulletIns5.transform.right * BulletSpeed);
+                GameObject BulletIns6 = Instantiate(Bullet, Gun.position, Gun.rotation);
+                BulletIns6.transform.transform.Rotate(0, 0, -(spread * 2));
+                BulletIns6.GetComponent<Rigidbody2D>().AddForce(BulletIns6.transform.right * BulletSpeed);
+                break;
+
+            //bomb
+            case 2:
+                if (count > 0)
+                {
+                    Debug.LogError("test1");
+                    GameObject BulletIns7 = Instantiate(Bullet, Gun.position, Gun.rotation);
+                    count--;
+                }
+                break;
+        }
     }
 
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 78654164559818338}
   - component: {fileID: 78654164559818336}
   - component: {fileID: -6526054277698060528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BadCactus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6129c6935a6b56a4fb1e2140c392a468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2
+  hp: 20
   value: 1
   drop: 1
   coin: {fileID: 10561070091749449, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4141345297592571205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dropPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

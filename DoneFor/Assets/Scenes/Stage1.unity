@@ -306,6 +306,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6403795}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6403797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 6403795}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &123022217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -583,6 +595,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1748200692859185812, guid: 336c6136f1f504672ba79369b5f7e6f4,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 6403797}
+    - target: {fileID: 2274922892450742696, guid: 336c6136f1f504672ba79369b5f7e6f4,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 6403797}
     - target: {fileID: 3164623826383440236, guid: 336c6136f1f504672ba79369b5f7e6f4,
         type: 3}
       propertyPath: joystick
@@ -608,6 +630,11 @@ PrefabInstance:
       propertyPath: m_UseAutoMass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4131350088803782190, guid: 336c6136f1f504672ba79369b5f7e6f4,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 6403797}
     - target: {fileID: 5777881700646243946, guid: 336c6136f1f504672ba79369b5f7e6f4,
         type: 3}
       propertyPath: m_Name
@@ -48880,7 +48907,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 848032919
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -51290,7 +51317,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2113628453
-  m_SortingLayer: 9
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

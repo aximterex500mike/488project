@@ -10,6 +10,7 @@ public class DeathMenuScript : MonoBehaviour
     public Text scoreDisplay;
     public Text messageDisplay;
     public InputField name;
+    public GameObject submitButton;
     private void Start()
     {
         controller = GameObject.FindWithTag("GameController");
@@ -57,7 +58,8 @@ public class DeathMenuScript : MonoBehaviour
             if (submit)
             {
                 SaveSystem.saveHighscores(scores);
-                messageDisplay.text = ("Score submitted! Your rank is" + index.ToString());
+                messageDisplay.text = ("Score submitted! Your rank is " + index.ToString());
+                submitButton.SetActive(false);
             }
             else
             {

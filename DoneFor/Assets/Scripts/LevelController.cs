@@ -15,6 +15,7 @@ public class LevelController : MonoBehaviour
     public int maxLevel = 1;
     public float spawnCD = 1;
     public float spawnCDtemp = 5;
+    public int[,] upgradeItems = new int[4, 7];
     private Saver load;
 
     // upgrades
@@ -39,6 +40,35 @@ public class LevelController : MonoBehaviour
             {
                 coins = load.coins;
                 maxLevel = load.level;
+                upgradeItems = load.upgradeItems;
+            }
+            else
+            {
+                upgradeItems[1, 1] = 1;  // revolver firerate
+                upgradeItems[1, 2] = 2;  // revolver dmg
+                upgradeItems[1, 3] = 3;  // shotgun firerate
+                upgradeItems[1, 4] = 4;  // shotgun dmg
+                upgradeItems[1, 5] = 5;  // bomb radius
+                upgradeItems[1, 6] = 6;  // bomb count
+                upgradeItems[1, 7] = 7;  // player health
+
+                // Price = upgradeItems[2,i]
+                upgradeItems[2, 1] = 10;
+                upgradeItems[2, 2] = 10;
+                upgradeItems[2, 3] = 10;
+                upgradeItems[2, 4] = 10;
+                upgradeItems[2, 5] = 10;
+                upgradeItems[2, 6] = 10;
+                upgradeItems[2, 7] = 10;
+
+                // Quantity = upgradeItems[3,i]
+                upgradeItems[3, 1] = 0;
+                upgradeItems[3, 2] = 0;
+                upgradeItems[3, 3] = 0;
+                upgradeItems[3, 4] = 0;
+                upgradeItems[3, 5] = 0;
+                upgradeItems[3, 6] = 0;
+                upgradeItems[3, 7] = 0;
             }
         }
     }

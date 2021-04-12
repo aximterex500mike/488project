@@ -96,10 +96,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gun: {fileID: 8431534855072293568, guid: 1820a284b04ebfb45946b5806e309c0f, type: 3}
-  Bullet: {fileID: 4953218137626366413, guid: df9f5b86041158a4097ab1e78ce77050, type: 3}
-  BulletSpeed: 1200
+  Bullet: {fileID: 4953218137626366413, guid: ccc3cb5c958df854582f3fb72bdeb3ce, type: 3}
+  BulletSpeed: 900
   ShootPoint: {fileID: 496553727204854954}
   fireRate: 2
+  gun: 1
+  spread: 7
+  count: 3
+  joystick: {fileID: 0}
 --- !u!1 &496553727204854955
 GameObject:
   m_ObjectHideFlags: 0

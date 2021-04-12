@@ -129,4 +129,7 @@ MonoBehaviour:
   Bullet: {fileID: 4953218137626366413, guid: df9f5b86041158a4097ab1e78ce77050, type: 3}
   BulletSpeed: 1200
   ShootPoint: {fileID: 7772919893060867715}
-  fireRate: 6
+  fireRate: 4
+  gun: 0
+  spread: 0
+  joystick: {fileID: 0}
