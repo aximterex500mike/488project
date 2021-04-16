@@ -7,7 +7,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class LevelController : MonoBehaviour
 {
-    public int supply = 10;
     public int goal = 10;
     public int score = 0;
     public int coins = 0;
@@ -108,15 +107,13 @@ public class LevelController : MonoBehaviour
         //
         level = i;
         goal = (i * 5) + 10;
-        supply = goal;
         spawnCDtemp = 5;
         spawnCD = 1 - (((float).025) * level);
         score = 0;
   
         if(level == 26)
         {
-            //load win screen
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("Death");
         }
         else if(level < 5)
         {
@@ -144,15 +141,13 @@ public class LevelController : MonoBehaviour
     {
         //set up level scaling for next level
         goal = (level * 5) + 10;
-        supply = goal;
         spawnCDtemp = 5;
         spawnCD = 1 - (((float).025) * level);
 
         //return scene name to load
         if (level == 26)
         {
-            //load win screen
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene("Death");
         }
         else if (level < 5)
         {

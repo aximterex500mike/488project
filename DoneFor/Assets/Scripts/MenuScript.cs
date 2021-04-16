@@ -7,6 +7,7 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject popup;
     GameObject controller;
+
     private void Start()
     {
         controller = GameObject.FindWithTag("GameController");

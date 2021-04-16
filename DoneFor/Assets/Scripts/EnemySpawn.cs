@@ -16,18 +16,27 @@ public class EnemySpawn : MonoBehaviour
     public GameObject[] enemy;  // Array of enemy prefabs 
     int randomSpawnPos, randomEnemy;
     public static bool spawning;    // Spawn only when Player is alive 
+    GameObject controller;
+    public int limit = 10;
     void Start()
     {
+        controller = GameObject.FindWithTag("GameController");
+        limit = controller.GetComponent<LevelController>().goal;
         spawning = true;
         // InvokeRepeating(string methodName, float time, float repeatRate)
         // Spawns every 1 second 
-        InvokeRepeating("SpawnEnemy", 0f, 1f);  
+        InvokeRepeating("SpawnEnemy", 0f, 1.2f);  
     }
 
     void SpawnEnemy()
     {
         if (spawning)
         {
+            limit--;
+            if (limit <= 0)
+            {
+                spawning = false;
+            }
             randomSpawnPos = Random.Range(0, spawnPoint.Length);
             randomEnemy = Random.Range(0, enemy.Length);
             // Spawn random enemy and position 

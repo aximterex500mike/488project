@@ -9,6 +9,7 @@ public class DeathMenuScript : MonoBehaviour
     GameObject controller;
     public Text scoreDisplay;
     public Text messageDisplay;
+    public Text endMessage;
     public InputField aname;
     public GameObject submitButton;
     private void Start()
@@ -16,6 +17,11 @@ public class DeathMenuScript : MonoBehaviour
         controller = GameObject.FindWithTag("GameController");
         int playerScore = controller.GetComponent<LevelController>().score;
         scoreDisplay.text = ("Score: " + playerScore.ToString());
+        int lvl = controller.GetComponent<LevelController>().level;
+        if(lvl > 25)
+        {
+            endMessage.text = "You Won!";
+        }
 
     }
     public void submitScore()

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7465203086902006735}
-  - component: {fileID: 7465203086902006732}
+  - component: {fileID: 8582171392991344903}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7465203086902006732
+--- !u!114 &8582171392991344903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,10 +40,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 7465203086902006733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffd91ba6fa629d49ad856ec41b1b940, type: 3}
+  m_Script: {fileID: 11500000, guid: 89c9424e65c0a694da565e913168f203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 78654164559818350, guid: 2ea553c4b83f3bd4da146eaf76636353, type: 3}
-  rate: 3
-  holds: 10
-  cooldown: 0
+  spawnPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemy:
+  - {fileID: 78654164559818350, guid: 2ea553c4b83f3bd4da146eaf76636353, type: 3}
+  - {fileID: 78654164559818350, guid: 738647fcc908eff499c1ceceada2de02, type: 3}
+  limit: 10
