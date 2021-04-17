@@ -240,6 +240,18 @@ PrefabInstance:
       objectReference: {fileID: 1544662400}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c096302dd9e36ad44adc01ccc1713a2d, type: 3}
+--- !u!114 &84363448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7433710036284138836, guid: eee03645b6a7bc5418a7b2520ab51884,
+    type: 3}
+  m_PrefabInstance: {fileID: 909560134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85896052
 GameObject:
   m_ObjectHideFlags: 0
@@ -39273,6 +39285,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5732832233694979306, guid: eee03645b6a7bc5418a7b2520ab51884,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5732832233694979307, guid: eee03645b6a7bc5418a7b2520ab51884,
         type: 3}
       propertyPath: m_Pivot.x
@@ -39392,11 +39409,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377253311768790084, guid: 937d696bfb0efed41a04168298ad7af5,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1744176997}
+    - target: {fileID: 3606159372573384958, guid: 937d696bfb0efed41a04168298ad7af5,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1744176997}
+    - target: {fileID: 3880796393089420226, guid: 937d696bfb0efed41a04168298ad7af5,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1744176997}
     - target: {fileID: 5223652857765420942, guid: 937d696bfb0efed41a04168298ad7af5,
         type: 3}
       propertyPath: m_Name
       value: Cowboy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5223652857765420944, guid: 937d696bfb0efed41a04168298ad7af5,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 84363448}
     - target: {fileID: 5223652858776133347, guid: 937d696bfb0efed41a04168298ad7af5,
         type: 3}
       propertyPath: m_RootOrder
@@ -42338,6 +42375,84 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1743201215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743201218}
+  - component: {fileID: 1743201217}
+  - component: {fileID: 1743201216}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Event
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1743201216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743201215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1743201217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743201215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1743201218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743201215}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744176997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7433710035611164920, guid: eee03645b6a7bc5418a7b2520ab51884,
+    type: 3}
+  m_PrefabInstance: {fileID: 909560134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1984343849
 GameObject:
   m_ObjectHideFlags: 0
