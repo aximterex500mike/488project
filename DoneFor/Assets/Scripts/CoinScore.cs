@@ -2,7 +2,7 @@
  * Coin Score
     * updates when Player collects coin
     * shows score as text 
- */
+ 
 
 using System.Collections;
 using System.Collections.Generic;
@@ -30,3 +30,4 @@ public class CoinScore : MonoBehaviour
         text.text = "X" + score.ToString();
     }
 }
+*/
