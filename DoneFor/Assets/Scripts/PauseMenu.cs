@@ -33,6 +33,11 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu() {
         //Debug.log("Loading menu..");
         SceneManager.LoadScene("MainMenu");
+        if(GameIsPaused) {
+            Resume();
+        } else {
+            Pause();
+        }
     }
 
     public void QuitGame() {
