@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     // Update is called once per frame
     public void takeDamage(int damage)
     {

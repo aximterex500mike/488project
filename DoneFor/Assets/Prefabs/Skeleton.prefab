@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 5259237360978478473}
   - component: {fileID: 5259237360978478472}
   - component: {fileID: -6773761572400273572}
-  - component: {fileID: -9006106240158186737}
+  - component: {fileID: 5332982914677793458}
   m_Layer: 8
   m_Name: Skeleton
   m_TagString: Enemy
@@ -234,7 +234,7 @@ MonoBehaviour:
   drop: 1
   coin: {fileID: 10561070091749449, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
   dropPoint: {fileID: 1798147191047919834}
---- !u!114 &-9006106240158186737
+--- !u!114 &5332982914677793458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,9 +243,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5259237360978478475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b13da1106e6fae74fa771c48eb2c0db2, type: 3}
+  m_Script: {fileID: 11500000, guid: dd15988f9135a00458019ecd6ff129a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  cooldown: 0
+  animator: {fileID: 0}
+  shootDist: 0.6
 --- !u!1 &5259237361132117656
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5467162097963394913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.038, y: -0.024, z: 0}
+  m_LocalPosition: {x: -0.027, y: -0.043, z: 0}
   m_LocalScale: {x: 1.3, y: 1.7247, z: 1}
   m_Children: []
   m_Father: {fileID: 5259237360978478486}
