@@ -232,7 +232,7 @@ MonoBehaviour:
   hp: 14
   value: 1
   drop: 1
-  coin: {fileID: 10561070091749449, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
+  coin: {fileID: 2560659144574417738, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
   dropPoint: {fileID: 1798147191047919834}
 --- !u!114 &5332982914677793458
 MonoBehaviour:

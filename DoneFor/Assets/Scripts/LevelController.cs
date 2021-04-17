@@ -115,19 +115,19 @@ public class LevelController : MonoBehaviour
         {
             SceneManager.LoadScene("Death");
         }
-        else if(level < 5)
+        else if(level <= 5)
         {
             SceneManager.LoadScene("Stage1");
         }
-        else if (level < 10)
+        else if (level <= 10)
         {
             SceneManager.LoadScene("Stage2");
         }
-        else if (level < 15)
+        else if (level <= 15)
         {
             SceneManager.LoadScene("Stage3");
         }
-        else if (level < 20)
+        else if (level <= 20)
         {
             SceneManager.LoadScene("Stage4");
         }
@@ -149,19 +149,19 @@ public class LevelController : MonoBehaviour
         {
             SceneManager.LoadScene("Death");
         }
-        else if (level < 5)
+        else if (level <= 5)
         {
             SceneManager.LoadScene("Stage1");
         }
-        else if (level < 10)
+        else if (level <= 10)
         {
             SceneManager.LoadScene("Stage2");
         }
-        else if (level < 15)
+        else if (level <= 15)
         {
             SceneManager.LoadScene("Stage3");
         }
-        else if (level < 20)
+        else if (level <= 20)
         {
             SceneManager.LoadScene("Stage4");
         }

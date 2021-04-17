@@ -18,6 +18,7 @@ public class EnemySpawn : MonoBehaviour
     public static bool spawning;    // Spawn only when Player is alive 
     GameObject controller;
     public int limit = 10;
+    public float cd = 2.0f;
     void Start()
     {
         controller = GameObject.FindWithTag("GameController");
@@ -25,7 +26,7 @@ public class EnemySpawn : MonoBehaviour
         spawning = true;
         // InvokeRepeating(string methodName, float time, float repeatRate)
         // Spawns every 1 second 
-        InvokeRepeating("SpawnEnemy", 0f, 1.2f);  
+        InvokeRepeating("SpawnEnemy", 0f, cd);  
     }
 
     void SpawnEnemy()

@@ -92,14 +92,14 @@ public class PlayerScript : MonoBehaviour
         if (thing.CompareTag("Enemy"))
         {
             gameObject.transform.GetComponent<Health>().takeDamage(1);
-            control.GetComponent<LevelController>().scorePenalty(0);
+            control.GetComponent<LevelController>().scorePenalty(20);
         }
         if (thing.CompareTag("Bullet"))
         {
             if (thing.transform.GetComponent<EnemyBulletScript>().isEnemyShot)
             {
                 gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<EnemyBulletScript>().damage);
-                control.GetComponent<LevelController>().scorePenalty(0);
+                control.GetComponent<LevelController>().scorePenalty(20);
                 Destroy(thing);
             }
         }

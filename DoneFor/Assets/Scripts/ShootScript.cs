@@ -96,7 +96,6 @@ public class ShootScript : MonoBehaviour
             case 2:
                 if (count > 0)
                 {
-                    Debug.LogError("test1");
                     GameObject BulletIns7 = Instantiate(Bullet, Gun.position, Gun.rotation);
                     count--;
                 }

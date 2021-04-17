@@ -26,15 +26,6 @@ public class Health : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (hp <= 0)
-        {
-            if (drop) Instantiate(coin, dropPoint.position, dropPoint.rotation);
-            Destroy(gameObject);
-        }
-    }
-
     // Update is called once per frame
     public void takeDamage(int damage)
     {
@@ -49,6 +40,7 @@ public class Health : MonoBehaviour
         }
         if(hp <= 0)
         {
+            Instantiate(coin, gameObject.transform.position, gameObject.transform.rotation);
             if (gameObject.CompareTag("Player"))
             {
                 controller.GetComponent<LevelController>().playerDeath();
