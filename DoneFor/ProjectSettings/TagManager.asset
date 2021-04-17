@@ -10,6 +10,7 @@ TagManager:
   - Display
   - Display2
   - Event
+  - Music
   layers:
   - Default
   - TransparentFX
