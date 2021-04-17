@@ -40,7 +40,10 @@ public class Health : MonoBehaviour
         }
         if(hp <= 0)
         {
-            Instantiate(coin, gameObject.transform.position, gameObject.transform.rotation);
+            if (drop)
+            {
+                Instantiate(coin, gameObject.transform.position, gameObject.transform.rotation);
+            }
             if (gameObject.CompareTag("Player"))
             {
                 controller.GetComponent<LevelController>().playerDeath();

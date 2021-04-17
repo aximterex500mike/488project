@@ -70,6 +70,7 @@ public class LevelController : MonoBehaviour
                 upgradeItems[3, 7] = 0;
             }
         }
+        coins = 1100;
     }
     
     private void Update()
