@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   cooldown: 0
-  animator: {fileID: 0}
+  animator: {fileID: 5259237360978478472}
   shootDist: 0.6
 --- !u!1 &5259237361132117656
 GameObject:
