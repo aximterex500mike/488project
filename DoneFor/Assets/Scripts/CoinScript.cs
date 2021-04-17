@@ -1,7 +1,7 @@
 ﻿/*
  * Coin Script
     * set value of coin
- */
+
 
 using System.Collections;
 using System.Collections.Generic;
@@ -20,3 +20,4 @@ public class CoinScript : MonoBehaviour
         }
     }
 }
+*/
