@@ -21,6 +21,7 @@ public class WeaponSelect : MonoBehaviour
 
         for (int i = 0; i < totalWeapons; i++)
         {
+
             guns[i] = weaponHolder.transform.GetChild(i).gameObject;
             guns[i].SetActive(false);
         }
@@ -46,20 +47,40 @@ public class WeaponSelect : MonoBehaviour
                 WeaponHUDScript.weaponName = currentGun.name;
                 nextPress = false;
             }
+            else{
+                guns[currentWeaponIndex].SetActive(false);
+                currentWeaponIndex = 0;
+                guns[currentWeaponIndex].SetActive(true);
+                currentGun = guns[currentWeaponIndex];
+                WeaponHUDScript.weaponName = currentGun.name;
+                nextPress = false;  
+            }
+
         }
 
         if (prevPress  == true)
         {
-            //previous Weapon
-            if (currentWeaponIndex > 0)
-            {
+            //previous Weapon            
+            if(currentWeaponIndex >= 0){
                 guns[currentWeaponIndex].SetActive(false);
                 currentWeaponIndex -= 1;
+                if(currentWeaponIndex > -1){
                 guns[currentWeaponIndex].SetActive(true);
                 currentGun = guns[currentWeaponIndex];
                 WeaponHUDScript.weaponName = currentGun.name;
-                prevPress = false;
+                prevPress = false;  }
             }
+            if (currentWeaponIndex < 0)
+            {
+                guns[0].SetActive(false);
+                guns[2].SetActive(true);
+                currentGun = guns[2];
+                WeaponHUDScript.weaponName = currentGun.name;
+                prevPress = false; 
+                currentWeaponIndex = 2;
+            
+            }
+
         }
     } 
     }
