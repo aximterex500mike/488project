@@ -17,6 +17,8 @@ public class PlayerScript : MonoBehaviour
     public GameObject bomb;
     GameObject controller;
     int[,] upgradeItems;
+    Renderer rend;
+    Color c;
 
     private void Start()
     {
@@ -32,6 +34,8 @@ public class PlayerScript : MonoBehaviour
         sbullet.GetComponent<bulletScript>().damage     = (upgradeItems[3, 4] + 5);
         bomb.GetComponent<ShootScript>().count          = (upgradeItems[3, 5] + 3);
         bombdrop.GetComponent<BombScript>().radius      = (2 + upgradeItems[3, 6]);
+        rend = GetComponent<Renderer> ();
+        c = rend.material.color;
     }
 
     public Joystick joystick;
@@ -92,14 +96,16 @@ public class PlayerScript : MonoBehaviour
         if (thing.CompareTag("Enemy"))
         {
             gameObject.transform.GetComponent<Health>().takeDamage(1);
-            control.GetComponent<LevelController>().scorePenalty(20);
+            StartCoroutine("GetInvulnerable");
+            control.GetComponent<LevelController>().scorePenalty(0);
         }
         if (thing.CompareTag("Bullet"))
         {
             if (thing.transform.GetComponent<EnemyBulletScript>().isEnemyShot)
             {
                 gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<EnemyBulletScript>().damage);
-                control.GetComponent<LevelController>().scorePenalty(20);
+                StartCoroutine("GetInvulnerable");
+                control.GetComponent<LevelController>().scorePenalty(0);
                 Destroy(thing);
             }
         }
@@ -112,7 +118,18 @@ public class PlayerScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-           
+        
+
     }
+        IEnumerator GetInvulnerable(){
+        Physics2D.IgnoreLayerCollision(8,9,true);
+        c.a = 0.5f;
+        rend.material.color = c;
+        PlayerScript.Invulnerable = 1;
+        yield return new WaitForSeconds(3f);
+        PlayerScript.Invulnerable = 0;
+        c.a = 1f;
+        rend.material.color = c;
+        }
 }
 
