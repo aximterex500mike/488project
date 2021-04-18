@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7077223240016844281}
   - component: {fileID: 7077223240016844282}
   - component: {fileID: 7077223240016844283}
-  - component: {fileID: 7077223240016844285}
   m_Layer: 0
   m_Name: Cowboy
   m_TagString: Player
@@ -195,18 +194,6 @@ MonoBehaviour:
   drop: 0
   coin: {fileID: 0}
   dropPoint: {fileID: 0}
---- !u!114 &7077223240016844285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7077223240016844260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247c7c9ba15647a4ba16d68b6df36811, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7077223240890372518
 PrefabInstance:
   m_ObjectHideFlags: 0
