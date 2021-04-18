@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5259237359492452804}
   m_Layer: 8
   m_Name: hitBox
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08040798, y: 0.15359771}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 5259237360640800754}
   m_Layer: 8
   m_Name: skele_sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,8 +124,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 622677345
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 4035959289877228764, guid: 6b8164e6ad1ab854eb32420fd58ebba4,
     type: 3}
@@ -168,7 +168,7 @@ Transform:
   m_GameObject: {fileID: 5259237360978478475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 5259237361132117657}
   - {fileID: 5259237360640800757}
@@ -197,7 +197,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &5259237360978478472
 Animator:
   serializedVersion: 3
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd15988f9135a00458019ecd6ff129a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   cooldown: 0
   animator: {fileID: 5259237360978478472}
   shootDist: 0.6
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 5259237361132117670}
   m_Layer: 8
   m_Name: skele_collider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
