@@ -87,7 +87,8 @@ public class ItemManagerScript : MonoBehaviour
     {
         controller = GameObject.FindWithTag("GameController");
         coins = controller.GetComponent<LevelController>().coins;
-        coinsText.text = ("Coins: " + coins.ToString());
+        string txt = "Coins: " + coins.ToString();
+        coinsText.text = txt;
     }
 
 
@@ -112,7 +113,9 @@ public class ItemManagerScript : MonoBehaviour
                 UpgradeItemRef.GetComponent<UpgradeItem>().quantityText.text = upgradeItems[3, itemId].ToString();
                 UpgradeItemRef.GetComponent<UpgradeItem>().priceText.text = upgradeItems[2, itemId].ToString();
 
-
+                coins = controller.GetComponent<LevelController>().coins;
+                string txt = "Coins: " + coins.ToString();
+                coinsText.text = txt;
             }
         }
 
