@@ -7,10 +7,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2182894895685614331, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894895685614331, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894895685614331, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894895685614331, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896359046999, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896359046999, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896359046999, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896359046999, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896574020781, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896574020781, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896978491649, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182894896978491649, guid: 83421f7ef35794c299ff81fe3855fa04,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3958092571943304929, guid: 83421f7ef35794c299ff81fe3855fa04,
         type: 3}
       propertyPath: m_Name
-      value: Joystick
+      value: Joystick Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3958092571943304933, guid: 83421f7ef35794c299ff81fe3855fa04,
         type: 3}

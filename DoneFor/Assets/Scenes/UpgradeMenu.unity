@@ -298,9 +298,9 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -849,7 +849,7 @@ MonoBehaviour:
   itemId: 1
   priceText: {fileID: 971191192}
   quantityText: {fileID: 1198025983}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!1 &470936160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 893287567}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.7492977
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1649,7 +1649,7 @@ MonoBehaviour:
   itemId: 0
   priceText: {fileID: 784939228}
   quantityText: {fileID: 776170711}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!114 &784939234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   itemId: 7
   priceText: {fileID: 784939231}
   quantityText: {fileID: 1658316827}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!114 &787758675 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2386524311123886823, guid: 813247e36b7397a4d8b824aa5d66a00a,
@@ -1947,7 +1947,7 @@ MonoBehaviour:
   itemId: 4
   priceText: {fileID: 787758675}
   quantityText: {fileID: 1759312788}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!1001 &1161191804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2405,7 +2405,7 @@ MonoBehaviour:
   itemId: 6
   priceText: {fileID: 1161191807}
   quantityText: {fileID: 1118774320}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!114 &1161191813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,7 +2421,7 @@ MonoBehaviour:
   itemId: 5
   priceText: {fileID: 1161191810}
   quantityText: {fileID: 1773980871}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!1 &1198025981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,7 +2527,7 @@ MonoBehaviour:
   itemId: 2
   priceText: {fileID: 13843165}
   quantityText: {fileID: 1487600396}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!1 &1277839227
 GameObject:
   m_ObjectHideFlags: 0
@@ -2791,7 +2791,7 @@ MonoBehaviour:
   itemId: 3
   priceText: {fileID: 1966741770}
   quantityText: {fileID: 934991075}
-  ItemManager: {fileID: 36048549}
+  controller: {fileID: 0}
 --- !u!1 &1658316825
 GameObject:
   m_ObjectHideFlags: 0

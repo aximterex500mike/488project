@@ -872,7 +872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 279, y: -185.00002}
+  m_AnchoredPosition: {x: 325, y: -213.99998}
   m_SizeDelta: {x: 207, y: 35.54104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156344486
@@ -1866,7 +1866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -400, y: 381.45}
+  m_AnchoredPosition: {x: -508.87067, y: 486}
   m_SizeDelta: {x: 0, y: 312.9714}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &488732179
@@ -2813,8 +2813,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 700349248}
   m_HandleRect: {fileID: 700349247}
   m_Direction: 0
-  m_Value: 0.0000054577795
-  m_Size: 0.75670636
+  m_Value: -0.0000015464364
+  m_Size: 0.9626675
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3484,7 +3484,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1040, y: 768}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3677,8 +3677,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 257.55267}
-  m_SizeDelta: {x: 700, y: 349.91895}
+  m_AnchoredPosition: {x: 179.88135, y: 166.20001}
+  m_SizeDelta: {x: 919.7627, y: 490.48615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105922037
 MonoBehaviour:
@@ -3858,10 +3858,10 @@ RectTransform:
   m_Father: {fileID: 1067484517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 520, y: -550}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -163.5, y: -166}
+  m_SizeDelta: {x: -1267, y: -668}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1301078786 stripped
 GameObject:
@@ -4161,8 +4161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 257.55267}
-  m_SizeDelta: {x: 700, y: 349.91895}
+  m_AnchoredPosition: {x: 163.79999, y: 163.79999}
+  m_SizeDelta: {x: 951.92566, y: 494.13727}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1408692496
 MonoBehaviour:

@@ -117,6 +117,7 @@ public class PlayerScript : MonoBehaviour
         // If player collides with coin, destroy 
         if (collision.gameObject.CompareTag("Coins"))
         {
+            controller.GetComponent<LevelController>().coins += 1;
             Destroy(collision.gameObject);
         }
         

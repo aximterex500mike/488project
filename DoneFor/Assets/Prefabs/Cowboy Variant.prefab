@@ -142,6 +142,21 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7077223240016844260, guid: 336c6136f1f504672ba79369b5f7e6f4,
+        type: 3}
+      propertyPath: m_Name
+      value: Cowboy Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077223240016844282, guid: 336c6136f1f504672ba79369b5f7e6f4,
+        type: 3}
+      propertyPath: speed.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077223240016844282, guid: 336c6136f1f504672ba79369b5f7e6f4,
+        type: 3}
+      propertyPath: speed.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7077223240016844282, guid: 336c6136f1f504672ba79369b5f7e6f4,
         type: 3}
       propertyPath: joystick
