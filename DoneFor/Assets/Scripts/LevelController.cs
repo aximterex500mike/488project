@@ -107,9 +107,9 @@ public class LevelController : MonoBehaviour
         //still need to figure out scaling
         //
         level = i;
-        goal = (i * 5) + 10;
+        goal = (i * 8) + 10;
         spawnCDtemp = 5;
-        spawnCD = 1 - (((float).025) * level);
+        spawnCD = 1.5f - (((float).03) * level);
         score = 0;
   
         if(level == 26)
@@ -141,9 +141,9 @@ public class LevelController : MonoBehaviour
     public void getNextLevel()
     {
         //set up level scaling for next level
-        goal = (level * 5) + 10;
+        goal = (level * 8) + 10;
         spawnCDtemp = 5;
-        spawnCD = 1 - (((float).025) * level);
+        spawnCD = 1.5f - (((float).03) * level);
 
         //return scene name to load
         if (level == 26)

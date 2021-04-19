@@ -24,6 +24,7 @@ public class EnemySpawn : MonoBehaviour
         controller = GameObject.FindWithTag("GameController");
         limit = controller.GetComponent<LevelController>().goal;
         spawning = true;
+        cd = controller.GetComponent<LevelController>().spawnCD;
         // InvokeRepeating(string methodName, float time, float repeatRate)
         // Spawns every 1 second 
         InvokeRepeating("SpawnEnemy", 0f, cd);  

@@ -851,6 +851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8582171392991344903, guid: c096302dd9e36ad44adc01ccc1713a2d,
         type: 3}
+      propertyPath: cd
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582171392991344903, guid: c096302dd9e36ad44adc01ccc1713a2d,
+        type: 3}
       propertyPath: enemy.Array.data[1]
       value: 
       objectReference: {fileID: 78654164559818350, guid: 738647fcc908eff499c1ceceada2de02,
