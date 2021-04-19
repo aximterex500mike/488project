@@ -31,6 +31,7 @@ public class LevelController : MonoBehaviour
         }
         else
         {
+            score = 0;
             DontDestroyOnLoad(gameObject);
             load = SaveSystem.loadData();
             if (load != null)
@@ -180,6 +181,7 @@ public class LevelController : MonoBehaviour
     {
         coins = 0;
         maxLevel = 1;
+        score = 0;
         upgradeItems[1, 1] = 1;  // revolver firerate
         upgradeItems[1, 2] = 2;  // revolver dmg
         upgradeItems[1, 3] = 3;  // shotgun firerate

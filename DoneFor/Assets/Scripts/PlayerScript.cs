@@ -36,6 +36,7 @@ public class PlayerScript : MonoBehaviour
         bombdrop.GetComponent<BombScript>().radius      = (2 + upgradeItems[3, 6]);
         rend = GetComponent<Renderer> ();
         c = rend.material.color;
+        Invulnerable = 0;
     }
 
     public Joystick joystick;
@@ -97,7 +98,7 @@ public class PlayerScript : MonoBehaviour
         {
             gameObject.transform.GetComponent<Health>().takeDamage(1);
             StartCoroutine("GetInvulnerable");
-            control.GetComponent<LevelController>().scorePenalty(0);
+            control.GetComponent<LevelController>().scorePenalty(20);
         }
         if (thing.CompareTag("Bullet"))
         {
@@ -105,7 +106,7 @@ public class PlayerScript : MonoBehaviour
             {
                 gameObject.transform.GetComponent<Health>().takeDamage(thing.transform.GetComponent<EnemyBulletScript>().damage);
                 StartCoroutine("GetInvulnerable");
-                control.GetComponent<LevelController>().scorePenalty(0);
+                control.GetComponent<LevelController>().scorePenalty(20);
                 Destroy(thing);
             }
         }
