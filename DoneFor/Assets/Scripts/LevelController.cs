@@ -112,7 +112,7 @@ public class LevelController : MonoBehaviour
         spawnCD = 1.5f - (((float).03) * level);
         score = 0;
   
-        if(level == 26)
+        if(level >= 26)
         {
             SceneManager.LoadScene("Death");
         }
@@ -146,7 +146,7 @@ public class LevelController : MonoBehaviour
         spawnCD = 1.5f - (((float).03) * level);
 
         //return scene name to load
-        if (level == 26)
+        if (level >= 26)
         {
             SceneManager.LoadScene("Death");
         }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2422417225512222261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dropPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3463720089869513309}
   - component: {fileID: 5610384551482557536}
   - component: {fileID: 4693271808534859626}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 8624218492208304676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 2422417225512222261}
   m_Father: {fileID: 0}
@@ -103,8 +103,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 622677345
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 9d802672f009c784e8e72d6b4273de1a,
     type: 3}
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -156,11 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6129c6935a6b56a4fb1e2140c392a468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 10
   value: 1
-  drop: 0
-  coin: {fileID: 0}
-  dropPoint: {fileID: 0}
+  drop: 1
+  coin: {fileID: 2560659144574417738, guid: 0a5623d44669fce4b9ecbe8a90f54c88, type: 3}
+  dropPoint: {fileID: 2422417225512222261}
 --- !u!114 &3463720089869513309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd15988f9135a00458019ecd6ff129a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   cooldown: 0
   animator: {fileID: 5610384551482557536}
   shootDist: 0.6

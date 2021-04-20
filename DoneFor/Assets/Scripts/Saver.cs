@@ -13,6 +13,7 @@ public class Saver
     {
         if (lc.level > lc.maxLevel) {
             this.level = lc.level;
+            lc.maxLevel = level;
         }else{
             this.level = lc.maxLevel;
         }
