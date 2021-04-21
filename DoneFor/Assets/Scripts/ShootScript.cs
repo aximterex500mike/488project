@@ -28,11 +28,11 @@ public class ShootScript : MonoBehaviour
     // ADDED FOR JOYSTICK
     public Joystick joystick;
 
-
+    public AudioManager audioManager;
 
     void Start()
     {
-          
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -72,6 +72,7 @@ public class ShootScript : MonoBehaviour
             case 0:
                 GameObject BulletIns = Instantiate(Bullet, Gun.position, Gun.rotation);
                 BulletIns.GetComponent<Rigidbody2D>().AddForce(BulletIns.transform.right * BulletSpeed);
+                audioManager.Play("Revolver");
                 break;
 
             //shotgun
@@ -90,6 +91,7 @@ public class ShootScript : MonoBehaviour
                 GameObject BulletIns6 = Instantiate(Bullet, Gun.position, Gun.rotation);
                 BulletIns6.transform.transform.Rotate(0, 0, -(spread * 2));
                 BulletIns6.GetComponent<Rigidbody2D>().AddForce(BulletIns6.transform.right * BulletSpeed);
+                audioManager.Play("Shotgun");
                 break;
 
             //bomb
