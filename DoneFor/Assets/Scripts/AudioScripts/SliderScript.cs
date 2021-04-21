@@ -10,13 +10,13 @@ public class SliderScript : MonoBehaviour
 
     //public Slider slider;
 
+    public string soundName;
+
     // Start is called before the first frame update
     void Start()
     {
-
         Slider slider = gameObject.GetComponent<Slider>();
-        slider.value = audioManager.getVolume("Theme");
-        
+        slider.value = audioManager.getVolume(soundName);
     }
 
     // Update is called once per frame

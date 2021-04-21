@@ -11,4 +11,8 @@ public class SettingsMenu : MonoBehaviour {
         audioManager.SetVolume(volume);
     }
 
+    public void SetEffectVolume(float volume) {
+        audioManager.SetEffectVolume(volume);
+    }
+
 }

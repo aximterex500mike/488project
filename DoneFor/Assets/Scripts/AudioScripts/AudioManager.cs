@@ -59,4 +59,20 @@ public class AudioManager : MonoBehaviour {
         s.source.volume = volume;
         s.setVolume(volume);
     }
+
+    public void SetEffectVolume(float volume) {
+        //string name = "Theme";
+        Sound s1 = Array.Find(instance.sounds, sound => sound.name == "Revolver");
+        Sound s2 = Array.Find(instance.sounds, sound => sound.name == "Shotgun");
+        if (s1 == null || s2 == null) {
+            Debug.LogWarning("Sound: " + s1.name + " not found!");
+            return;
+        }
+
+        s1.source.volume = volume;
+        s1.setVolume(volume);
+
+        s2.source.volume = volume;
+        s2.setVolume(volume);
+    }
 }
