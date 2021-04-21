@@ -20,7 +20,12 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("SettingsMenu");
    }
 
-   public void ToLevelSelection() {
+    public void ToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void ToLevelSelection() {
         SceneManager.LoadScene("LevelSelection");
    }
 
